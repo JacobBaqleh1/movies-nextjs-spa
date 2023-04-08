@@ -21,18 +21,23 @@ const NowPlaying = () => {
   }, []);
 
   return (
-    <div className="bg-gray-400 flex flex-row flex-wrap items-center relative justify-evenly  ">
+    <div className="bg-gray-200 flex flex-row flex-wrap relative justify-around  ">
       {movies.map((movie) => (
-        <div key={movie.id} className="flex flex-col items-center mx-2 my-4">
+        <div
+          key={movie.id}
+          className="flex flex-col justify-evenly items-center mx-2 my-6  rounded-md shadow-md w-56"
+        >
           <h2 className="text-primary text-xl text-raleway font-bold tracking-wider md:text-base">
             {movie.title}
           </h2>
-          <Image
-            width={220}
-            height={300}
-            src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
-            alt={movie.title}
-          />
+          <div className="bg-white rounded-b-md p-4">
+            <Image
+              width={170}
+              height={300}
+              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+              alt={movie.title}
+            />
+          </div>
         </div>
       ))}
     </div>

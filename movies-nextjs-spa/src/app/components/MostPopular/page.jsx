@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
+import React from "react";
 
-const TopRated = () => {
+const MostPopular = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const API_KEY = "629a273e48cb2530e7dfe69e18a528a4";
-    const API_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=629a273e48cb2530e7dfe69e18a528a4`;
+    const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=629a273e48cb2530e7dfe69e18a528a4`;
 
     axios
       .get(API_URL)
@@ -43,5 +43,4 @@ const TopRated = () => {
     </div>
   );
 };
-
-export default TopRated;
+export default MostPopular;

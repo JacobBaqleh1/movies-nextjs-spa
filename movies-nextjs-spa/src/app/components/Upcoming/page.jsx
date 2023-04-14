@@ -7,7 +7,6 @@ const Upcoming = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const API_KEY = "629a273e48cb2530e7dfe69e18a528a4";
     const API_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=629a273e48cb2530e7dfe69e18a528a4`;
 
     axios
@@ -25,7 +24,7 @@ const Upcoming = () => {
       {movies.map((movie) => (
         <div
           key={movie.id}
-          className="flex flex-col justify-evenly items-center mx-2 my-6  rounded-md shadow-md w-56"
+          className="bg-gray-400 flex flex-col justify-evenly items-center mx-2 my-6  rounded-md shadow-md w-56"
         >
           <h2 className="text-primary text-xl text-raleway font-bold tracking-wider md:text-base">
             {movie.title}

@@ -6,7 +6,7 @@ function MainNavigation() {
     <div className="bg-gray-500">
       {/*Header Title */}
       <h2 className="text-center text-4xl font-bold my-4">
-        MOvies! Movies! MOvies!
+        All Things Movies.com
       </h2>
       {/*Nav Links */}
       <nav className="my-16 pb-4">

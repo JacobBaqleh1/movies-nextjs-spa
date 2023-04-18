@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
 import React from "react";
+import usePopularMovies from "@/app/api/hello/route";
 
 const MostPopular = () => {
-  const [movies, setMovies] = useState([]);
+  const movies = usePopularMovies();
 
-  useEffect(() => {
+  /*useEffect(() => {
     const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=629a273e48cb2530e7dfe69e18a528a4`;
 
     axios
@@ -18,7 +19,7 @@ const MostPopular = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, []);
+  }, []);*/
 
   return (
     <div className="bg-gray-200 flex flex-row flex-wrap relative justify-around  ">
